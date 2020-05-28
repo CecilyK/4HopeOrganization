@@ -28,7 +28,7 @@
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -71,11 +71,12 @@
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3">
-                            <!-- <div class="logo">
+                            <div class="logo">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                    <!-- <img src="img/logo.png" alt=""> -->
+                                    <p style="color: whitesmoke; font-weight: 800; font-size: larger;">4HopeOrg</p>
                                 </a>
-                            </div> -->
+                            </div> 
                         </div>
                         <div class="col-xl-9 col-lg-9">
                             <div class="main-menu">
@@ -89,18 +90,14 @@
                                                 <li><a href="single-blog.html">articles</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="">Events <i class="ti-angle-down"></i></a>
-                                            <!-- <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                                <li><a href="Cause.html">Cause</a></li>
-                                            </ul> -->
-                                        </li>
+                                        <li><a href="">Events </a>  </li>
+                                      
                                         <li><a href="contact.html">Volunteer</a></li>
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="#">Donate</a>
+                                        <a data-scroll-nav='1' href="donate.html">Donate</a>
                                     </div>
                                 </div>
                             </div>
@@ -231,23 +228,34 @@
     <!-- latest_activites_area_end  -->
 
     <!-- popular_causes_area_start  -->
-<br><br><br>
+<br><br>
       
 
-<div class="row" id="gallery" data-toggle="modal" data-target="#exampleModal">
-    <div class="col-12 col-sm-6 col-lg-3">
-      <img class="w-100" src="https://images.unsplash.com/photo-1546853020-ca4909aef454?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="0">
-    </div>
-    <div class="col-12 col-sm-6 col-lg-3">
-      <img class="w-100" src="https://images.unsplash.com/photo-1546534505-d534e27ecb35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="1">
-    </div>
-    <div class="col-12 col-sm-6 col-lg-3">
-      <img class="w-100" src="https://images.unsplash.com/photo-1546111380-cfca9a43dd85?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="2">
-    </div>
-    <div class="col-12 col-sm-6 col-lg-3">
-      <img class="w-100" src="https://images.unsplash.com/photo-1547288242-f3d375fc7b5f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="First slide" data-target="#carouselExample" data-slide-to="3">
-    </div>
+
+
+<h2 id="demo02" style="text-align: center;">Our Gallery</h2>
+<div class="hover02 column">
+  <div>
+    <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
+    <span>Hover</span>
   </div>
+  <div>
+    <figure><img src="https://picsum.photos/300/200?image=1024" /></figure>
+    <span>Hover</span>
+  </div>
+  <div>
+    <figure><img src="https://picsum.photos/300/200?image=611" /></figure>
+    <span>Hover</span>
+  </div>
+  <div>
+    <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
+    <span>Hover</span>
+  </div>
+ 
+</div>
+
+<br><br><br>
+
   
   <!-- Modal -->
   <!-- 
@@ -508,7 +516,7 @@
     </div>
     <!-- news__area_end  -->
 
-    <div data-scroll-index='1' class="make_donation_area section_padding">
+    <!-- <div data-scroll-index='1' class="make_donation_area section_padding">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -567,7 +575,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- footer_start  -->
     <footer class="footer">
@@ -617,7 +625,7 @@
                             </h3>
                             <ul class="links">
                                 <li><a href="#">Grief Articles</a></li>
-                                <li><a href="#">Donate</a></li>
+                                <li><a href="donate.html">Donate</a></li>
                                 <li><a href="#">About us</a></li>
                                 <li><a href="#">Volunteer</a></li>
                       

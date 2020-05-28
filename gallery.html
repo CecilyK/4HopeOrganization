@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+<script>
+    // Gallery image hover
+$( ".img-wrapper" ).hover(
+  function() {
+    $(this).find(".img-overlay").animate({opacity: 1}, 600);
+  }, function() {
+    $(this).find(".img-overlay").animate({opacity: 0}, 600);
+  }
+);
+
+// Lightbox
+var $overlay = $('<div id="overlay"></div>');
+var $image = $("<img>");
+var $prevButton = $('<div id="prevButton"><i class="fa fa-chevron-left"></i></div>');
+var $nextButton = $('<div id="nextButton"><i class="fa fa-chevron-right"></i></div>');
+var $exitButton = $('<div id="exitButton"><i class="fa fa-times"></i></div>');
+
+// Add overlay
+$overlay.append($image).prepend($prevButton).append($nextButton).append($exitButton);
+$("#gallery").append($overlay);
+
+// Hide overlay on default
+$overlay.hide();
+
+// When an image is clicked
+$(".img-overlay").click(function(event) {
+  // Prevents default behavior
+  event.preventDefault();
+  // Adds href attribute to variable
+  var imageLocation = $(this).prev().attr("href");
+  // Add the image src to $image
+  $image.attr("src", imageLocation);
+  // Fade in the overlay
+  $overlay.fadeIn("slow");
+});
+
+// When the overlay is clicked
+$overlay.click(function() {
+  // Fade out the overlay
+  $(this).fadeOut("slow");
+});
+
+// When next button is clicked
+$nextButton.click(function(event) {
+  // Hide the current image
+  $("#overlay img").hide();
+  // Overlay image location
+  var $currentImgSrc = $("#overlay img").attr("src");
+  // Image with matching location of the overlay image
+  var $currentImg = $('#image-gallery img[src="' + $currentImgSrc + '"]');
+  // Finds the next image
+  var $nextImg = $($currentImg.closest(".image").next().find("img"));
+  // All of the images in the gallery
+  var $images = $("#image-gallery img");
+  // If there is a next image
+  if ($nextImg.length > 0) { 
+    // Fade in the next image
+    $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
+  } else {
+    // Otherwise fade in the first image
+    $("#overlay img").attr("src", $($images[0]).attr("src")).fadeIn(800);
+  }
+  // Prevents overlay from being hidden
+  event.stopPropagation();
+});
+
+// When previous button is clicked
+$prevButton.click(function(event) {
+  // Hide the current image
+  $("#overlay img").hide();
+  // Overlay image location
+  var $currentImgSrc = $("#overlay img").attr("src");
+  // Image with matching location of the overlay image
+  var $currentImg = $('#image-gallery img[src="' + $currentImgSrc + '"]');
+  // Finds the next image
+  var $nextImg = $($currentImg.closest(".image").prev().find("img"));
+  // Fade in the next image
+  $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
+  // Prevents overlay from being hidden
+  event.stopPropagation();
+});
+
+// When the exit button is clicked
+$exitButton.click(function() {
+  // Fade out the overlay
+  $("#overlay").fadeOut("slow");
+});
+</script>
+</head>
+<body>
+
+
+        <!-- header-start -->
+	<header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                            <div class="short_contact_list">
+                                <ul>
+                                    <li><a href="#"> <i class="fa fa-phone"></i> 0700000000</a></li>
+                                    <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                            <div class="social_media_links d-none d-lg-block">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-pinterest-p"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <!-- <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div> -->
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.html">Grief Support</a></li>
+                                        <li><a href="About.html">About</a></li>
+                                        <li><a href="#">Resources <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">books</a></li>
+                                                <li><a href="single-blog.html">articles</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="">Events <i class="ti-angle-down"></i></a>
+                                            <!-- <ul class="submenu">
+                                                <li><a href="elements.html">elements</a></li>
+                                                <li><a href="Cause.html">Cause</a></li>
+                                            </ul> -->
+                                        </li>
+                                        <li><a href="contact.html">Volunteer</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a data-scroll-nav='1' href="#">Donate</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Our gallery</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+
+    <section id="gallery">
+        <div class="container">
+          <div id="image-gallery">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                <div class="img-wrapper">
+                  <a href="https://unsplash.it/500"><img src="https://unsplash.it/500" class="img-responsive"></a>
+                  <div class="img-overlay">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                <div class="img-wrapper">
+                  <a href="https://unsplash.it/600"><img src="https://unsplash.it/600" class="img-responsive"></a>
+                  <div class="img-overlay">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                <div class="img-wrapper">
+                  <a href="https://unsplash.it/700"><img src="https://unsplash.it/700" class="img-responsive"></a>
+                  <div class="img-overlay">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                <div class="img-wrapper">
+                  <a href="https://unsplash.it/800"><img src="https://unsplash.it/800" class="img-responsive"></a>
+                  <div class="img-overlay">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                <div class="img-wrapper">
+                  <a href="https://unsplash.it/900"><img src="https://unsplash.it/900" class="img-responsive"></a>
+                  <div class="img-overlay">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                <div class="img-wrapper">
+                  <a href="https://unsplash.it/1000"><img src="https://unsplash.it/1000" class="img-responsive"></a>
+                  <div class="img-overlay">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                <div class="img-wrapper">
+                  <a href="https://unsplash.it/1100"><img src="https://unsplash.it/1100" class="img-responsive"></a>
+                  <div class="img-overlay">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+                <div class="img-wrapper">
+                  <a href="https://unsplash.it/1200"><img src="https://unsplash.it/1200" class="img-responsive"></a>
+                  <div class="img-overlay">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End row -->
+          </div><!-- End image gallery -->
+        </div><!-- End container --> 
+      </section>
+    <!-- footer_start  -->
+	<footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <!-- <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/footer_logo.png" alt="">
+                                </a>
+                            </div> -->
+                            <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore.
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Services
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#">Grief Articles</a></li>
+                                <li><a href="#">Donate</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Volunteer</a></li>
+                      
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contacts
+                            </h3>
+                            <div class="contacts">
+                                <p>070000000<br>
+                                    youremail@gmail.com <br>
+                                    Mombasa, Kenya
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Top articles
+                            </h3>
+                            <ul class="news_links">
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="img/news/news_1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>Support groups you could join</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="img/news/news_2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>Save a life by following these steps</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- <p><
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+</p> -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+ 
+
+    
+</body>
+</html>
