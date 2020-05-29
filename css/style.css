@@ -5675,6 +5675,7 @@ h6 {
 
 /* line 549, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_blog.scss */
 .blog_details h2 {
+  margin-left: -2px;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 8px;
