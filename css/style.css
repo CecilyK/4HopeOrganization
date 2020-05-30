@@ -5673,6 +5673,10 @@ h6 {
   color: #3CC78F;
 }
 
+.gap100{
+  padding:70px 0px;
+}
+
 /* line 549, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_blog.scss */
 .blog_details h2 {
   margin-left: -2px;
