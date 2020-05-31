@@ -24,6 +24,14 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
  
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
@@ -81,7 +89,20 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">Grief Support</a></li>
+                                        <li><a href="#">Grief Support <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="#">Adults<i class="ti-angle-right"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a href="virtualmeetings.html">Virtual Meetings</a></li>
+                                                        <li><a href="supportgroups.html">Support Groups</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li><a href="onsitegriefsupport.html">On Site Grief Support</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        
                                         <li><a href="About.html">About</a></li>
                                         <li><a href="#">Resources <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
@@ -89,13 +110,13 @@
                                                 <li><a href="single-blog.html">articles</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="">Events <i class="ti-angle-down"></i></a>
+                                        <li><a href="">Events </i></a>
                                             <!-- <ul class="submenu">
                                                 <li><a href="elements.html">elements</a></li>
                                                 <li><a href="Cause.html">Cause</a></li>
                                             </ul> -->
                                         </li>
-                                        <li><a href="contact.html">Volunteer</a></li>
+                                        <li><a href="volunteer.html">Volunteer</a></li>
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
@@ -508,7 +529,7 @@
     </div>
     <!-- news__area_end  -->
 
-    <div data-scroll-index='1' class="make_donation_area section_padding">
+  <!--  <div data-scroll-index='1' class="make_donation_area section_padding">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -567,7 +588,160 @@
 
             </div>
         </div>
+    </div>-->
+    
+   
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="section_title text-center mb-55">
+                <h3><span>Events</span></h3>
+            </div>
+        </div>
     </div>
+    <section class="news-section">
+
+      <div class="container">
+       <!-- <div class="main-title-box text-center">
+                     <div class="small-title">News & Blog</div>
+                     <h2 class="big-title">Our Recent Artciles</h2>
+                 </div> -->
+                 <div class="row">
+                     <!--Single Blog Start-->
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0ms">
+                         <div class="news-item">
+                             <div class="news_box">
+                                 <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/CKNmhMX/blog1.jpg.jpg" alt=""></div>
+                                 <div class="news-content">
+                                     <div class="news_postdate">
+                                         <span>Jan 03, 2019</span>
+                                     </div>
+                                     <a href="single-blog.html">
+                                         <h3>The Future of Digital Marketing</h3>
+                                     </a>
+                                     <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                     <div class="news_authorinfo">
+                                         <span><i class="fa fa-user"></i>  <a href="">Robert Tylor </a></span>
+                                        
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!--Single Blog End-->
+                     <!--Single Blog Start-->
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                         <div class="news-item active">
+                             <div class="news_box">
+                                 <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/m5yGbdR/blog2.jpg" alt=""></div>
+                                 <div class="news-content">
+                                     <div class="news_postdate">
+                                         <span>Nov 05, 2018</span>
+                                     </div>
+                                     <a href="single-blog.html">
+                                         <h3>Successful content marketing plan </h3>
+                                     </a>
+                                     <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                     <div class="news_authorinfo">
+                                         <span><i class="fa fa-user"></i>  <a href="">Jessica keri</a></span>
+                                        
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!--Single Blog End-->
+                     <!--Single Blog Start-->
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="800ms">
+                         <div class="news-item">
+                             <div class="news_box">
+                                 <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/YXV3zmh/blog3.jpg" alt=""></div>
+                                 <div class="news-content">
+                                     <div class="news_postdate">
+                                         <span>Dec 22, 2018</span>
+                                     </div>
+                                     <a href="single-blog.html">
+                                         <h3>Our agency helps to grow creativity</h3>
+                                     </a>
+                                     <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                     <div class="news_authorinfo">
+                                         <span><i class="fa fa-user"></i>  <a href="">Brandon Auger</a></span>
+                                        
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!--Single Blog End-->
+                     <!--Single Blog Start-->
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0ms">
+                         <div class="news-item">
+                             <div class="news_box">
+                                 <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/CKNmhMX/blog1.jpg" alt=""></div>
+                                 <div class="news-content">
+                                     <div class="news_postdate">
+                                         <span>Dec 05, 2017</span>
+                                     </div>
+                                     <a href="single-blog.html">
+                                         <h3>The Future of Digital Marketing</h3>
+                                     </a>
+                                     <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                     <div class="news_authorinfo">
+                                         <span><i class="fa fa-user"></i>  <a href="">Astley Fletcher</a></span>
+                                        
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!--Single Blog End-->
+                     <!--Single Blog Start-->
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                         <div class="news-item active">
+                             <div class="news_box">
+                                 <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/m5yGbdR/blog2.jpg" alt=""></div>
+                                 <div class="news-content">
+                                     <div class="news_postdate">
+                                         <span>Nov 13, 2017</span>
+                                     </div>
+                                     <a href="single-blog.html">
+                                         <h3>Successful content marketing plan </h3>
+                                     </a>
+                                     <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                     <div class="news_authorinfo">
+                                         <span><i class="fa fa-user"></i>  <a href="">Nichel Benjamin</a></span>
+                                        
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!--Single Blog End-->
+                     <!--Single Blog Start-->
+                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="800ms">
+                         <div class="news-item">
+                             <div class="news_box">
+                                 <div class="newsimg"><img class="img-responsive" src="https://i.ibb.co/YXV3zmh/blog3.jpg" alt=""></div>
+                                 <div class="news-content">
+                                     <div class="news_postdate">
+                                         <span>Aug 18, 2017</span>
+                                     </div>
+                                     <a href="single-blog.html">
+                                         <h3>Our agency helps to grow creativity</h3>
+                                     </a>
+                                     <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                                     <div class="news_authorinfo">
+                                         <span><i class="fa fa-user"></i>  <a href="">Andrew Mickel </a></span>
+                                         <span><i class="fa fa-comment"></i> <a href="">Comments: (4)</a></span>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!--Single Blog End-->
+                 </div>
+             </div>
+         </div>
+ </section>
 
     <!-- footer_start  -->
     <footer class="footer">
